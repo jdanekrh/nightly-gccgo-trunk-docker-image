@@ -60,7 +60,7 @@ RUN DEBIAN_FRONTEND=noninteractive transientBuildDeps="dpkg-dev apt-utils bison 
     && cd gcc \
     && mkdir objdir \
     && cd objdir \
-    && ../configure --enable-languages=c,c++,fortran --disable-multilib \
+    && ../configure --enable-languages=c,c++,fortran,go --disable-multilib \
        --disable-bootstrap --build=x86_64-linux-gnu \
     && make -j"$(nproc)" \
     && make install-strip \
